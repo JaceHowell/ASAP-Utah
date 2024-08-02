@@ -1,12 +1,13 @@
 import { useState } from "react";
-import Header from "./components/Header/Header.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import Header from "../components/Header/Header.jsx";
+import Footer from "../components/Footer/Footer.jsx";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <>
       <Header />
-      <div className="home-landing ">
+      <div className="home-landing">
         <h1 className="landing-text text-center p-2 font-bold">
           Avian Sanctuary and Protection Utah
         </h1>
@@ -32,6 +33,8 @@ const App = () => {
         </p>
       </div>
 
+
+      <Outlet/>
       <Footer />
     </>
   );
