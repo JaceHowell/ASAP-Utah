@@ -8,7 +8,7 @@ const App = () => {
     <>
       <Header />
       <div className="home-landing">
-        <h1 className="landing-text text-center p-2 font-bold">
+        <h1 className="landing-text text-center p-2 font-bold text-3xl">
           Avian Sanctuary and Protection Utah
         </h1>
         <p className="p-1.5">
@@ -22,7 +22,7 @@ const App = () => {
         <btn className="donate-btn text-blue-400">Donate</btn>
       </div>
       <div className="home-about">
-        <h2 className="text-center p-1.5 font-medium">What is ASAP Utah?</h2>
+        <h2 className="text-center p-1.5 font-medium text-2xl">What is ASAP Utah?</h2>
         <p className="p-1.5">
           We are an avian rescue sanctuary devoted to domestic and wild
           non-native birds. Re-homing, rehabilitating, and education in the
