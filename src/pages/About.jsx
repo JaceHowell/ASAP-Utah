@@ -10,7 +10,7 @@ const About = () => {
       <h2 className="flex justify-center p-4 pt-6 text-4xl">About</h2>
 
       <div>
-        <img></img>
+        <img src="./src/assets/images/about-award-1.jpg"></img>
         <p className="text-lg p-2 italic">
           We believe in raising avian awareness and helping people understand
           how to coexist with their natural environment. We wish our birds could
@@ -24,7 +24,7 @@ const About = () => {
       </div>
 
       <div>
-        <img></img>
+        <img src="./src/assets/images/about-award-2.jpg"></img>
         <p className="text-lg p-2 italic">
           The Avian Sanctuary and Protection Agency is a Utah State and Federal
           non-profit 501(c) 3 organization that will focus on the two pronged
