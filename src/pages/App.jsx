@@ -19,7 +19,7 @@ const App = () => {
           className="hompage-bird-img"
           src="./src/assets/images/homepage-bird.jpg"
         ></img>
-        <btn className="donate-btn text-blue-400">Donate</btn>
+        <a className="donate-btn text-blue-400">Donate</a>
       </div>
       <div className="home-about">
         <h2 className="text-center p-1.5 font-medium text-2xl">What is ASAP Utah?</h2>

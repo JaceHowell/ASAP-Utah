@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Header from "../components/Header/Header.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 import { Outlet } from "react-router-dom";
@@ -14,6 +15,17 @@ const About = () => {
   const showTeam = () => {
     setAboutSection(3);
   };
+
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    getData();
+  }, []);
+  const getData = async () => {
+    const res = await axios.get('/stats');
+    console.log("API Data: ", res.data)
+    setData(res.data)
+  }
+  
 
   return (
     <>
@@ -55,21 +67,47 @@ const About = () => {
       )}
 
       {aboutSection === 2 && (
-
         <>
-        <p>Stats</p>
+          <p>Stats</p>
 
-        <ol>
-        {/* TODO */}
-        {/* ADD POPULATION FROM DB */}
-        </ol>
+          <p>Intakes</p>
+          <ul>
+            {
+            data?.map(intake => (
+              <li>
+                {intake.year} {intake.intakes}
+              </li>
+            )) || null
+          }
+          </ul>
 
+          <p>Adoptions</p>
+          <ul>
+            {
+            data?.map(adoption => (
+              <li>
+                {adoption.year} {adoption.adoptions}
+              </li>
+            )) || null
+          }
+          </ul>
+
+          <p>Relocations</p>
+          <ul>
+            {
+            data?.map(relocation => (
+              <li>
+                {relocation.year} {relocation.relocations}
+              </li>
+            )) || null
+          }
+          </ul>
         </>
       )}
 
       {aboutSection === 3 && (
         <>
-        <p>Team</p>
+          <p>Team</p>
         </>
       )}
 

@@ -86,3 +86,13 @@ const y21 = await Stat.create({
     adoptions: 747,
     relocations: 533
 })
+
+// export const intakes = Stat.findAll({
+//       attributes: ['year', 'intakes']
+//     });
+// export const adoptions = Stat.findAll({
+//       attributes: ['year', 'adoptions']
+//     });
+// export const relocations = Stat.findAll({
+//       attributes: ['year', 'relocations']
+//     });
