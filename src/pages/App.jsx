@@ -19,7 +19,7 @@ const App = () => {
           className="hompage-bird-img"
           src="./src/assets/images/homepage-bird.jpg"
         ></img>
-        <a className="donate-btn text-blue-400">Donate</a>
+        <a className="donate-btn text-blue-400 hover:text-black" href="https://www.paypal.com/paypalme/asaputah?locale.x=en_US">Donate</a>
       </div>
       <div className="home-about">
         <h2 className="text-center p-1.5 font-medium text-2xl">What is ASAP Utah?</h2>

@@ -30,14 +30,14 @@ const About = () => {
   return (
     <>
       <Header />
-      <ul>
-        <button onClick={showAbout}>About</button>
-        <button onClick={showStats}>Stats & Adoptions</button>
-        <button onClick={showTeam}>Meet the Team</button>
+      <ul className="flex justify-center">
+        <button className="p-3 underline hover:text-blue-400" onClick={showAbout}>About</button>
+        <button className="p-3 underline hover:text-blue-400" onClick={showStats}>Stats & Adoptions</button>
+        <button className="p-3 underline hover:text-blue-400" onClick={showTeam}>Meet the Team</button>
       </ul>
       {aboutSection === 1 && (
         <>
-          <h2 className="flex justify-center p-4 pt-6 text-4xl">About</h2>
+          <h2 className="flex justify-center p-4 pt-2 text-4xl">About</h2>
 
           <div>
             <img src="./src/assets/images/about-award-1.jpg"></img>
@@ -68,46 +68,56 @@ const About = () => {
 
       {aboutSection === 2 && (
         <>
-          <p>Stats</p>
+          <h2 className="flex justify-center p-4 pt-2 text-4xl">Stats and Adoptions</h2>
 
-          <p>Intakes</p>
+          <div className="p-2">
+          <h3>Intakes</h3>
+          <img src="./src/assets/images/stats-intake-graph.webp"></img>
+          <img src="./src/assets/images/stats-pigeon.webp"></img>
           <ul>
             {
             data?.map(intake => (
               <li>
-                {intake.year} {intake.intakes}
+                {intake.year}: {intake.intakes}
               </li>
             )) || null
           }
           </ul>
+          </div>
 
-          <p>Adoptions</p>
+          <div className="p-2">
+          <h3>Adoptions</h3>
+          <img src="./src/assets/images/stats-parrot.webp"></img>
           <ul>
             {
             data?.map(adoption => (
               <li>
-                {adoption.year} {adoption.adoptions}
+                {adoption.year}: {adoption.adoptions}
               </li>
             )) || null
           }
           </ul>
+          </div>
 
-          <p>Relocations</p>
+          <div className="p-2">
+          <h3>Relocations</h3>
+          <img src="./src/assets/images/stats-swans.webp"></img>
           <ul>
             {
             data?.map(relocation => (
               <li>
-                {relocation.year} {relocation.relocations}
+                {relocation.year}: {relocation.relocations}
               </li>
             )) || null
           }
           </ul>
+          </div>
         </>
       )}
 
       {aboutSection === 3 && (
         <>
-          <p>Team</p>
+          <h2 className="flex justify-center p-4 pt-2 text-4xl">Meet the Team</h2>
         </>
       )}
 
