@@ -8,9 +8,9 @@ const Services = () => {
     <>
       <Header />
       <h2 className="flex justify-center p-4 pt-6 text-4xl">Services</h2>
-      <div className="bird-show-card p-2">
+      <div className="bird-show-card p-2 md:flex">
         <img
-          className="bird-show-img p-2"
+          className="bird-show-img p-2 md:max-w-2xl"
           src="./src/assets/images/bird-show.webp"
         ></img>
         <h3 className="text-3xl p-2">Sharing bird knowledge is our passion!</h3>
@@ -20,9 +20,9 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="adoption-events-card p-2">
+      <div className="adoption-events-card p-2 md:flex">
         <img
-          className="adoption-event-img p-2"
+          className="adoption-event-img p-2 md:max-w-2xl"
           src="./src/assets/images/adoption-event.webp"
         ></img>
         <h3 className="text-3xl p-2">Adoption Events</h3>
@@ -33,9 +33,9 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="birdy-pedicures-card p-2">
+      <div className="birdy-pedicures-card p-2 md:flex">
         <img
-          className="birdy-pedicure-img p-2"
+          className="birdy-pedicure-img p-2 md:max-w-2xl"
           src="./src/assets/images/birdy-pedicure.png"
         ></img>
         <h3 className="text-3xl p-2">Birdy Pedicures</h3>
